@@ -2,7 +2,7 @@
 /**
  * Functions which enhance the theme by hooking into WordPress
  *
- * @package rubismecenat
+ * @package custom-theme
  */
 
 /**
@@ -11,7 +11,7 @@
  * @param array $classes Classes for the body element.
  * @return array
  */
-function rubismecenat_body_classes( $classes ) {
+function custom_theme_body_classes( $classes ) {
 	// Adds a class of hfeed to non-singular pages.
 	if ( ! is_singular() ) {
 		$classes[] = 'hfeed';
@@ -24,7 +24,7 @@ function rubismecenat_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'rubismecenat_body_classes' );
+add_filter( 'body_class', 'custom_theme_body_classes' );
 
 
 /**

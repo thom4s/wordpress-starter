@@ -1,0 +1,80 @@
+{
+    "key": "group_673ca7bd28e43",
+    "title": "Options de la publication",
+    "fields": [
+        {
+            "key": "field_673dd14c72bc8",
+            "label": "Design \/ Affichage du haut de page (titre, visuels)",
+            "name": "head_design",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "full": "Sur le modèle du Design \"Le Fonds\"",
+                "fullwrapped": "Sur le modèle du Design \"Créez & Accompagnez\"",
+                "notitle": "Pas de titre (modèle du design de l'accueil)",
+                "simple": "titre et chapo centrés (modèle du Design \"Espace Press\")"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_6751acd857dbd",
+            "label": "Document à télécharger",
+            "name": "page_document",
+            "aria-label": "",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            },
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "default"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1733405945
+}
