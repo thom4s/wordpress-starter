@@ -1,0 +1,37 @@
+
+@use './global/colors' as *;
+
+
+input {
+    font-family: 'Brown';
+}
+
+.search-form {
+    background-color: $gray-light;
+    border-radius: 40px;
+    padding: 0 30px;
+    width: 100%;
+
+    label {
+        width: 90%;
+    }
+    input {
+        background: none;
+        border: none;
+        padding: 25px 20px;
+        width: 100%;
+        font-size: 2rem;
+    }
+    ::placeholder {
+        color: $black;
+        opacity: .4; 
+    }
+      
+    ::-ms-input-placeholder { 
+        color: $black;
+        opacity: .4; 
+    }
+    .hidden {
+        display: none;
+    }
+}

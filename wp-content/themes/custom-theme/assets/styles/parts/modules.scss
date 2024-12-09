@@ -1,0 +1,43 @@
+@use "./global/colors" as *;
+@use "./global/mixins" as *;
+@use "./global/typography" as *;
+
+
+/*------------------------------------*\
+    MODULES BORDER & BGs
+\*------------------------------------*/
+
+section[class*="mod"] {
+    &.-bordered {
+        border: 50px solid $accent-color;
+        padding: var(--space-xxl) 0;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &.-backgrounded:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/*------------------------------------*\
+    MOD CAROUSEL
+\*------------------------------------*/
+
+.mod_carousel {
+    margin-bottom: calc( var(--space-xxl) * 1.5);
+
+    &.-bg {
+        background-color: $gray-light;
+        padding: var(--space-xl) 0;
+    }
+    &.swiper {
+        @include wrapper-padding;
+
+        @include min(wide) {
+            padding-left: calc( calc( 100vw - var(--max-width) ) / 2);
+            padding-right: calc( calc( 100vw - var(--max-width) ) / 2);
+        }
+    }
+}
