@@ -28,8 +28,7 @@ if (have_rows( $flex_content )) :
 
 
         /*
-         * CITATION (BIG TYPO) 
-         * (cf. Accueil)
+         * BLOQUOTE
          */
         elseif (get_row_layout() == 'mod_quote') :
             $content = get_sub_field('mod_content');
@@ -44,7 +43,6 @@ if (have_rows( $flex_content )) :
             
         /*
          * GRILLE DE VISUELS 
-         * (cf. Projets)
          */
         elseif (get_row_layout() == 'mod_visualgrid') :
             $visuals = get_sub_field('mod_visuals');
@@ -55,27 +53,11 @@ if (have_rows( $flex_content )) :
 
             get_template_part('Components/Modules/Module', 'VisualGrid', $args);
 
-            
-
-            
-        /*
-         * IDENTITE ARTIST 
-         * (cf. Accueil)
-         */
-        elseif (get_row_layout() == 'mod_artist') :
-            $artist = get_sub_field('mod_publication');
-
-            $args = array(
-                'artist'   => $artist
-            );
-
-            get_template_part('Components/Modules/Module', 'Artist', $args);
 
 
 
         /*
          * ACTUALITES BIG
-         * (cf. Accueil)
          */
         elseif (get_row_layout() == 'mod_news') :
             $publication = get_sub_field('mod_publication');
@@ -92,8 +74,7 @@ if (have_rows( $flex_content )) :
 
 
         /*
-         * CAROUSEL DE PROJETS / PAGE / VIDEO / ACTU / ETC. 
-         * (Page, projet, etc.)
+         * CAROUSEL DE PROJETS / PAGE / NEWS
          */
         elseif (get_row_layout() == 'mod_carousel') :
 
@@ -109,7 +90,6 @@ if (have_rows( $flex_content )) :
                     'posts_per_page'    => $postsperpage,
                     'post_type'         => $posttype,
                     'status'            => 'published',
-
                 );
 
                 if( $posttype === 'event' ) {
@@ -148,30 +128,9 @@ if (have_rows( $flex_content )) :
 
 
 
-        /*
-         * CAROUSEL HORIZONTAL 
-         * (Transmettre...)
-         */
-        elseif (get_row_layout() == 'mod_carousel_horizontal') :
-
-            $title = get_sub_field('mod_title');
-            $firstContent = get_sub_field('mod_firstContent');
-            $relations = get_sub_field('mod_slides');
-
-            $args = array(
-                'title'   => $title,
-                'firstContent'   => $firstContent,
-                'relations'   => $relations
-            );
-
-            get_template_part('Components/Modules/Module', 'CarouselHorizontal', $args);
-
-
-
 
         /*
          * PROJETS MIS EN AVANT () 
-         * (Projet NDAO)
          */
         elseif (get_row_layout() == 'mod_featuredProjects') :
 
@@ -190,7 +149,6 @@ if (have_rows( $flex_content )) :
 
         /*
          * CONTENU SUR 2 COLONNES LIBRE
-         * (cf. Créez et Accompagner)
          */
         elseif (get_row_layout() == 'mod_contentSplit') :
 
@@ -244,8 +202,7 @@ if (have_rows( $flex_content )) :
 
 
         /*
-         * EQUIPE / CONTACTS
-         * (cf. Le Fonds / Espace Presse)
+         * INSTAGRAM FEED
          */
         elseif (get_row_layout() == 'mod_instafeed') :
 
@@ -265,9 +222,7 @@ if (have_rows( $flex_content )) :
 
 
 
-
         endif;
-
 
     endwhile;
 

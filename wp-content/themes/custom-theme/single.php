@@ -9,7 +9,6 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
-
 	
 		<?php
 
@@ -18,26 +17,8 @@ get_header();
 			$args = array();
 
 			switch ( get_post_type() ) {
-				case 'post':
-					$template = 'project';
-					break;
-				
-				case 'project':
-
-					if( get_field('page_model') === 'programmes' ) {
-						$template = 'programmes';
-					}
-					else if( get_field('page_model') === 'transmettre' ) {
-						$template = 'transmettre';
-					}
-					else if( get_field('page_model') === 'creer' ) {
-						$template = 'page';
-						$args['head_design'] = 'fullwrapped';
-						$args['breadcrumbs'] = true;
-					}
-					else {
-						$template = 'project';
-					}
+				case 'custom':
+					$template = 'custom';
 					break;
 
 				default:
