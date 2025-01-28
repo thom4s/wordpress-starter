@@ -1,6 +1,6 @@
 <?php
     $title = $args['title'];
-    $publication = $args['publication'];
+    $publication = $args['post'];
 ?>
 
 
@@ -20,32 +20,16 @@
 
                             <header class="mb-l">
                                 <h2 class="h2 mb-xxs"><?php  echo $publication->post_title; ?></h2>    
-                                <div class="h2 -other mb-xxs">
-                                    <?php the_field('project_subtitle', $publication->ID); ?>
-                                </div>
-                                <div class="h3 -other mb-xxs">
-                                    <?php the_field('project_place', $publication->ID); ?></div>
-                                <div class="h3 -other mb-s">
-                                    <?php the_field('project_artiste', $publication->ID); ?>
-                                </div>
-                                <div class="h3 -light">
-                                    <?php the_field('project_practical', $publication->ID); ?>
-                                </div>
                             </header>
 
                             <div class="body mb-s">
                                 <?php echo $publication->post_content; ?>
                             </div>
 
-                            <footer>
-                                <span class="action btn" href="<?php echo get_permalink($publication->ID); ?>">
-                                    <?php get_template_part('Components/Svgs/Svg', 'ArrowRight'); ?>
-                                </span>
-                            </footer>
                         </div>
                         <div class="s-1col"></div>
                         <div class="s-6col">
-                            <?php rubismecenat_post_thumbnail( $publication->ID, 'full' ); ?>
+                            <?php the_post_thumbnail( $publication->ID, 'full' ); ?>
                         </div>
                     </div>
                 </a>

@@ -33,11 +33,25 @@ section[class*="mod"] {
         padding: var(--space-xl) 0;
     }
     &.swiper {
-        @include wrapper-padding;
+        // @include wrapper-padding;
 
         @include min(wide) {
             padding-left: calc( calc( 100vw - var(--max-width) ) / 2);
             padding-right: calc( calc( 100vw - var(--max-width) ) / 2);
         }
+    }
+}
+
+/*------------------------------------*\
+    MOD QUOTE
+\*------------------------------------*/
+
+.mod_quote {
+    text-align: center;
+    @include max(medium) {
+        margin: var(--space-xxl) 0;
+    }
+    @include min(medium) {
+        margin: calc(var(--space-xxl) * 2) 0;
     }
 }

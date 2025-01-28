@@ -1,6 +1,6 @@
 <?php
     $title = $args['title'];
-    $posts = $args['relations'];
+    $posts = $args['posts'];
     $bg = $args['bg'];
 ?>
 
@@ -27,12 +27,10 @@
 
             <div class="swiper-wrapper">
 
-                <?php foreach ($posts as $post) : setup_postdata($post);?>
-                 
+                <?php foreach ($posts as $post) : setup_postdata($post); ?>
                     <div class="swiper-slide">
-                        <?php get_template_part('Components/Blocks/Block', ucfirst(get_post_type())); ?>
+                        <?php get_template_part('Components/Blocks/Block', 'Post'); ?>
                     </div>
-
                 <?php endforeach; ?>
 
             </div>
