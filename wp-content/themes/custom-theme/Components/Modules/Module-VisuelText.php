@@ -9,7 +9,7 @@ $txt = $args['txt'];
 
     <div class="grid gap-0">
         <figure class="mod_cover s-6col">
-            <img src="<?php echo $visuel['url']; ?>" alt="<?php echo $visuel["caption"]; ?>">
+            <img src="<?php echo $visuel; ?>">
         </figure>
         
         <div class="mod_content s-6col flex -center-y">

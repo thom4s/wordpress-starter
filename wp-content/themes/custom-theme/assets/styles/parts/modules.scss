@@ -12,9 +12,6 @@ section[class*="mod"] {
         border: 50px solid $accent-color;
         padding: var(--space-xxl) 0;
 
-        &:last-child {
-            margin-bottom: 0;
-        }
     }
     &.-backgrounded:last-child {
         margin-bottom: 0;
@@ -26,8 +23,6 @@ section[class*="mod"] {
 \*------------------------------------*/
 
 .mod_carousel {
-    margin-bottom: calc( var(--space-xxl) * 1.5);
-
     &.-bg {
         background-color: $gray-light;
         padding: var(--space-xl) 0;
@@ -53,5 +48,37 @@ section[class*="mod"] {
     }
     @include min(medium) {
         margin: calc(var(--space-xxl) * 2) 0;
+    }
+}
+
+/*------------------------------------*\
+    MOD NEWS
+\*------------------------------------*/
+
+.mod_news {
+    .mod_publication {
+        .img-container {
+            @include max(medium) {
+                order: -1;
+                margin-bottom: var(--space-xl);
+            }
+        }
+    }
+
+    img {
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+    }
+}
+
+/*------------------------------------*\
+    MOD visuel-text
+\*------------------------------------*/
+
+.mod_visuel-text {
+    .mod_content {
+        max-width: 800px;
     }
 }
