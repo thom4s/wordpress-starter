@@ -2,3 +2,29 @@
 @use "./global/mixins" as *;
 @use "./global/typography" as *;
 
+.post {
+    .entry-header {
+        height: 30vh;
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+        z-index: 0;
+        background-color: #3f3f3f;
+
+        .entry-title {
+            color: $white;
+        }
+    }
+    .post-thumbnail {
+        position: absolute;
+        max-width: 100%;
+        inset: 0;
+        overflow: hidden;
+        z-index: -1;
+
+        img {
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}
