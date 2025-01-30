@@ -15,4 +15,7 @@ body.admin-bar .site-header {
     border-bottom: 1.5px solid $black;
     z-index: 50;
     transition: transform .3s;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
 }

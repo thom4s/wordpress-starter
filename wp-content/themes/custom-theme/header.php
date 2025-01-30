@@ -29,9 +29,16 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'custom-starter' ); ?></a>
 
 	<header id="masthead" class="site-header">
-        
-        <nav id="header-navigation">
-            <?php wp_nav_menu( array( 'theme_location' => 'header', 'menu_id' => 'header-menu', 'container' => false ) ); ?>
-        </nav>
+
+		<div class="wrapper flex -space -center-y">
+
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+				<h1>Custom theme.</h1>
+			</a>
+			
+			<nav id="header-navigation">
+				<?php wp_nav_menu( array( 'theme_location' => 'header', 'menu_id' => 'header-menu', 'container' => false ) ); ?>
+			</nav>
+		</div>
 
     </header><!-- #masthead -->
