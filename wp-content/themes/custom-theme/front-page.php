@@ -46,6 +46,49 @@
             ?>
         </section>
         
+        <section class="home">
+            <h2>Module Contacts</h2>
+            <?php 
+                $contacts = array(
+                    array(
+                        'contact_name' => 'John Doe',
+                        'contact_fonction' => 'CEO',
+                        'contact_details' => 'John is the CEO of the company.',
+                        'contact_tel' => '06 00 00 00 00',
+                        'contact_email' => 'john.doe@example.com',
+                        'contact_linkedIn' => 'linkedin.com/in/johndoe'
+                    ),
+                    array(
+                        'contact_name' => 'Jane Smith',
+                        'contact_fonction' => 'CTO',
+                        'contact_details' => 'Jane is the CTO of the company.',
+                        'contact_tel' => '06 00 00 00 01',
+                        'contact_email' => 'jane.smith@example.com',
+                        'contact_linkedIn' => 'linkedin.com/in/janesmith'
+                    )
+                );
+                get_template_part( 'Components/Modules/Module', 'Contacts', array('contacts' => $contacts) ); 
+            ?>
+        </section>
+
+        <section class="home">
+            <h2>Module VisualGrid</h2>
+            <?php
+                $args = array(
+                    'post_type' => 'post',
+                    'posts_per_page' => 5,
+                );
+                    $posts = get_posts($args);
+                    $visuals = array();
+                    foreach ($posts as $post) {
+                        $visuals[] = array(
+                            'ID' => $post->ID,
+                            'thumbnail_id' => get_post_thumbnail_id($post->ID)
+                        );
+                    }
+                get_template_part( 'Components/Modules/Module', 'VisualGrid', array('visuals' => $visuals) ); 
+            ?>
+        </section>
 
     </main>
 
