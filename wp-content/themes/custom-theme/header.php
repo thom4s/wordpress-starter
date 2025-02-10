@@ -37,7 +37,13 @@
 			</a>
 			
 			<nav id="header-navigation">
-				<?php wp_nav_menu( array( 'theme_location' => 'header', 'menu_id' => 'header-menu', 'container' => false ) ); ?>
+				<?php wp_nav_menu( array( 'theme_location' => 'header-menu-fr', 'menu_id' => 'header-menu', 'container' => false ) ); ?>
+			</nav>
+
+			<nav class="lang_menu flex -center-y">
+				<ul id="" class="flex gap-xs">
+					<?php pll_the_languages(array( 'display_names_as' => 'slug') );?>
+				</ul>
 			</nav>
 		</div>
 

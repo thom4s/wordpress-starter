@@ -50,8 +50,10 @@ function custom_setup() {
 	
 
 	register_nav_menus( array(
-        'header' => 'Header Menu',
-        'footer' => 'Footer Menu',
+        'header-menu-fr' => 'Header menu FR',
+        'header-menu-en' => 'Header menu EN',
+        'footer-menu-fr' => 'Footer menu FR',
+        'footer-menu-en' => 'Footer menu EN',
     ) );
 
 	/*
