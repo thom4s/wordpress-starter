@@ -18,4 +18,8 @@ body.admin-bar .site-header {
     padding: 10px 0;
     display: flex;
     justify-content: space-between;
+
+    .site-logo {
+        width: 60px;
+    }
 }
