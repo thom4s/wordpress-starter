@@ -22,4 +22,11 @@ body.admin-bar .site-header {
     .site-logo {
         width: 60px;
     }
+
+    .menu-item {
+        a {
+            text-decoration: none;
+            color: $black;
+        }
+    }
 }

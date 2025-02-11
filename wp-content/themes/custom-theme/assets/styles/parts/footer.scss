@@ -1,5 +1,24 @@
 @use "./global/colors" as *;
 
 .site-footer {
-    background-color: black;
+    background-color: rgb(240, 240, 240);
+    padding: 40px 0;
+
+    .site-logo {
+        width: 60px;
+    }
+
+    .menu-item {
+        margin-bottom: 8px;
+
+        a {
+            text-decoration: none;
+            color: $black;
+        }
+    }
+
+    #copyright {
+        font-size: 14px;
+        opacity: 0.3;
+    }
 }
