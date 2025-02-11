@@ -5,65 +5,49 @@
  * @package custom-theme
  */
 
-get_header();
-$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-$args = array(
-	'post_type' => 'post',
-	'posts_per_page' => 20,
-	'paged' => $paged
-);
+get_header(); ?>
+<main id="main" class="archive-main" role="main">
+	<div class="wrapper">
+		<h1 class="mb-xl txt-center">Nos Actualités</h1>
 
-$query = new WP_Query($args);
-?>
+		<?php
+		$args = array(
+			'post_type'      => 'post',
+			'posts_per_page' => 10,
+			'orderby'        => 'date',
+			'order'          => 'DESC',
+			'paged'          => get_query_var('paged') ? get_query_var('paged') : 1,
+		);
 
-	<main id="primary" class="site-main -archive">
+		$post_query = new WP_Query($args);
 
-
-		<?php if ($query->have_posts()) : ?>
-			
-			<header class="entry-header -simple txt-center mb-xxl">
-				<div class="wrapper grid">
-					<div class="header-titles m-8col -centered">
-						<h1 class="entry-title mb-m"><?php the_title(); ?></h1>
-						<div class="body-title"><?php the_excerpt(); ?></div>
+		if ($post_query->have_posts()) : ?>
+			<div class="grid">
+				<?php while ($post_query->have_posts()) : $post_query->the_post(); ?>
+					<div class="s-3col">
+						<?php get_template_part('Components/Blocks/Block', 'post'); ?>
 					</div>
-				</div>
-			</header><!-- .entry-header -->
-
-			<div class="grid wrapper">
-				<div class="m-4col">
-					<?php list_terms_custom_taxonomy(array( 'tax' => 'category', 'posttype' => 'video' )); ?>
-				</div>
-
-				<div class="m-8col">
-					<div id="mainGrid" class="grid">
-
-						<?php while ($query->have_posts()) : $query->the_post(); ?>
-
-							<div class="m-6col mb-xxl">
-								<?php get_template_part( 'Components/Blocks/Block', 'Video' ); ?>
-							</div>
-
-						<?php endwhile; ?>
-							
-					</div>
-
-					<div id="search-pagination" class="pagination flex -center gap-s mb-xxl">
-						<?php pagination_bar($query); ?>
-					</div>
-
-				</div>
+				<?php endwhile; ?>
 			</div>
 
-			<?php wp_reset_postdata(); ?>
+			<div class="pagination">
+				<?php 
+					echo paginate_links(array(
+						'total' => $post_query->max_num_pages,
+						'current' => max(1, get_query_var('paged')),
+						'prev_text' => __('« Précédent', 'custom-theme'),
+						'next_text' => __('Suivant »', 'custom-theme'),
+					)); 
+				?>
+			</div>
 
 		<?php else : ?>
-			// Display no posts found message
-
-		<?php endif; ?>
-
-
-	</main><!-- #main -->
-
-<?php
-get_footer();
+			<p>Aucun article trouvé.</p>
+		<?php 
+			endif;
+			wp_reset_postdata();
+		?>
+	</div>
+</main>
+ 
+<?php get_footer(); ?>

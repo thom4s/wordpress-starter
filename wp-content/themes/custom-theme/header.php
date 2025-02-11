@@ -32,19 +32,16 @@
 
 		<div class="wrapper flex -space -center-y">
 
-			<!-- <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"> -->
-				<!-- <h1>Custom theme.</h1> -->
-				<?php 
-				$logo = get_field('logo_du_site', 'option'); 
-				if( $logo ): ?>
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-logo">
-						<img src="<?php echo esc_url( $logo ); ?>" alt="Logo">
-					</a>
-				<?php endif; ?>
-			<!-- </a> -->
+			<?php
+			$logo = get_field('logo_du_site', 'option'); 
+			if( $logo ): ?>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-logo">
+					<img src="<?php echo esc_url( $logo ); ?>" alt="Logo">
+				</a>
+			<?php endif; ?>
 			
 			<nav id="header-navigation">
-				<?php wp_nav_menu( array( 'theme_location' => 'header-menu-fr', 'menu_id' => 'header-menu', 'container' => false ) ); ?>
+				<?php wp_nav_menu( array( 'theme_location' => 'header-menu-fr', 'menu_id' => 'header-menu', 'container' => false, 'menu_class' => 'flex gap-l -center-y' ) ); ?>
 			</nav>
 
 			<nav class="lang_menu flex -center-y">

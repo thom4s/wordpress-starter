@@ -23,7 +23,7 @@
                             </header>
 
                             <div class="body mb-s">
-                                <?php echo $publication->post_content; ?>
+                                <?= the_excerpt($publication->ID); ?>
                             </div>
 
                         </div>
