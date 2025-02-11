@@ -23,9 +23,9 @@ get_header(); ?>
         $projets_query = new WP_Query($args);
 
         if ($projets_query->have_posts()) : ?>
-            <div class="grid">
+            <div class="grid gap-m">
                 <?php while ($projets_query->have_posts()) : $projets_query->the_post(); ?>
-					<div class="s-3col">
+					<div class="s-4col">
 						<?php get_template_part('Components/Blocks/Block', 'project'); ?>
 					</div>
                 <?php endwhile; ?>
@@ -36,8 +36,8 @@ get_header(); ?>
 					echo paginate_links(array(
 						'total' => $projets_query->max_num_pages,
 						'current' => max(1, get_query_var('paged')),
-						'prev_text' => __('« Précédent', 'custom-theme'),
-						'next_text' => __('Suivant »', 'custom-theme'),
+						'prev_text' => __('«', 'custom-theme'),
+						'next_text' => __('»', 'custom-theme'),
 					)); 
                 ?>
             </div>

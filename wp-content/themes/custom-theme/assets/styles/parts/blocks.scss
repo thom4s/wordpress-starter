@@ -2,5 +2,31 @@
 
 
 /*------------------------------------*\
-    CARD
+    PROJECT
 \*------------------------------------*/
+
+.block-post,
+.block-project {
+
+    &__image {
+
+        img,
+        .block_placeholder {
+            aspect-ratio: 5/4;
+            background-color: $gray-light;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: $black;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    a:hover {
+        color: $gray;
+    }
+}
