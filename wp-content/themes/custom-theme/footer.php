@@ -23,11 +23,11 @@
 				<?php endif; ?>
 
 				<nav id="footer-navigation" role="navigation">
-					<?php wp_nav_menu( array( 'theme_location' => 'header-menu-fr', 'menu_id' => 'footer-menu', 'container' => false ) ); ?>
+					<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'menu_id' => 'footer-menu', 'container' => false ) ); ?>
 				</nav>
 
 				<nav id="footer-navigation" role="navigation">
-					<?php wp_nav_menu( array( 'theme_location' => 'footer-menu-fr', 'menu_id' => 'footer-menu', 'container' => false ) ); ?>
+					<?php wp_nav_menu( array( 'theme_location' => 'footer-menu', 'menu_id' => 'footer-menu', 'container' => false ) ); ?>
 				</nav>
 			</div>
 

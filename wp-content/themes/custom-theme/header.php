@@ -33,7 +33,7 @@
 		<div class="header-top">
 			<div class="wrapper flex -space -center-y">
 				<nav id="header-navigation">
-					<?php wp_nav_menu( array( 'theme_location' => 'header-top-fr', 'menu_id' => 'header-menu', 'container' => false, 'menu_class' => 'flex gap-l -center-y' ) ); ?>
+					<?php wp_nav_menu( array( 'theme_location' => 'header-top', 'menu_id' => 'header-menu', 'container' => false, 'menu_class' => 'flex gap-l -center-y' ) ); ?>
 				</nav>
 
 				<nav class="lang_menu flex -center-y">
@@ -55,7 +55,7 @@
 			<?php endif; ?>
 			
 			<nav id="header-navigation">
-				<?php wp_nav_menu( array( 'theme_location' => 'header-menu-fr', 'menu_id' => 'header-menu', 'container' => false, 'menu_class' => 'flex gap-l -center-y' ) ); ?>
+				<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'menu_id' => 'header-menu', 'container' => false, 'menu_class' => 'flex gap-l -center-y' ) ); ?>
 			</nav>
 
 			<nav>
