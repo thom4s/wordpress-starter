@@ -30,7 +30,21 @@
 
 	<header id="masthead" class="site-header">
 
-		<div class="wrapper flex -space -center-y">
+		<div class="header-top">
+			<div class="wrapper flex -space -center-y">
+				<nav id="header-navigation">
+					<?php wp_nav_menu( array( 'theme_location' => 'header-top-fr', 'menu_id' => 'header-menu', 'container' => false, 'menu_class' => 'flex gap-l -center-y' ) ); ?>
+				</nav>
+
+				<nav class="lang_menu flex -center-y">
+					<ul id="" class="flex gap-xs">
+						<?php pll_the_languages(array( 'display_names_as' => 'slug') );?>
+					</ul>
+				</nav>
+			</div>
+		</div>
+
+		<div class="header-bottom flex -space -center-y wrapper">
 
 			<?php
 			$logo = get_field('logo_du_site', 'option'); 
@@ -44,10 +58,8 @@
 				<?php wp_nav_menu( array( 'theme_location' => 'header-menu-fr', 'menu_id' => 'header-menu', 'container' => false, 'menu_class' => 'flex gap-l -center-y' ) ); ?>
 			</nav>
 
-			<nav class="lang_menu flex -center-y">
-				<ul id="" class="flex gap-xs">
-					<?php pll_the_languages(array( 'display_names_as' => 'slug') );?>
-				</ul>
+			<nav>
+				<a href="#" class="btn -primary">CTA</a>
 			</nav>
 		</div>
 

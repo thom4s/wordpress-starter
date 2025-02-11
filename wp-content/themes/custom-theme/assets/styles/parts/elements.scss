@@ -6,8 +6,22 @@
 \*------------------------------------*/
 
 .btn {
-    font-size: 2rem;
+    font-size: 16px;
     transition: 0.3s;
+    text-decoration: none;
+
+    &.-primary {
+        background-color: $black;
+        color: $white;
+        padding: 0.5em 1em;
+        border: 2px solid $black;
+        border-radius: 10px;
+
+        &:hover {
+            background-color: $white;
+            color: $black;
+        }
+    }
 
     &.-filter {
         padding: 1em 2em .9em 2em;

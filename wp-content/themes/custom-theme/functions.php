@@ -52,6 +52,7 @@ function custom_setup() {
 	register_nav_menus( array(
         'header-menu-fr' => 'Header menu FR',
         'header-menu-en' => 'Header menu EN',
+		'header-top-fr'  => 'Header top FR',
         'footer-menu-fr' => 'Footer menu FR',
         'footer-menu-en' => 'Footer menu EN',
     ) );

@@ -15,13 +15,19 @@ body.admin-bar .site-header {
     border-bottom: 1.5px solid $black;
     z-index: 50;
     transition: transform .3s;
-    padding: 10px 0;
-    display: flex;
-    justify-content: space-between;
 
-    .site-logo {
-        width: 60px;
+    .header-top {
+        background-color: rgb(210, 210, 210);
+        padding: 10px 0;
     }
+
+    .header-bottom {
+        padding: 10px 0;
+        .site-logo {
+            width: 60px;
+        }
+    }
+
 
     .menu-item {
         a {
