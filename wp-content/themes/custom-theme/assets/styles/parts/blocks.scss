@@ -29,4 +29,12 @@
     a:hover {
         color: $gray;
     }
+
+    &__categories, &__tags {
+        background-color: rgb(239, 239, 239);
+        padding: 4px 8px;
+        border-radius: 5px;
+        width: fit-content;
+        opacity: 0.7;
+    }
 }

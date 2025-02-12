@@ -16,9 +16,26 @@
 
         <div class="">
             <h3 class="h3 mb-xxs"><?php the_title(); ?></h3>
-            <p class="h3 -other mb-xs"><?php the_field('project_subtitle'); ?></p>
-            <p class="body -big -light mb-xs"><?php the_field('project_place'); ?></p>
-            <p class="-light"><?php the_field('project_artiste'); ?></p>
+            <div class="flex gap-xxs wrap">
+                <?php 
+                $project_categories = get_the_terms(get_the_ID(), 'category');
+
+                if ($project_categories && !is_wp_error($project_categories)) : ?>
+                    <div class="block-post__categories">
+                        <?= implode(', ', array_map(function($category) {
+                            return '<a href="' . esc_url(get_term_link($category)) . '">' . esc_html($category->name) . '</a>';
+                        }, $project_categories)); ?>
+                    </div>
+                <?php endif; ?>
+
+
+                
+                <?php if (get_the_tag_list('', ', ')) : ?>
+                    <div class="block-post__tags">
+                        <?= get_the_tag_list('', ', '); ?>
+                    </div>
+                <?php endif; ?>
+            </div>
         </div>
     </a>
 </article>
