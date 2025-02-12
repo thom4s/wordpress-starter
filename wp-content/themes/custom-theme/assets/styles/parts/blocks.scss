@@ -8,6 +8,12 @@
 .block-post,
 .block-project {
 
+    &__link::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+    }
+
     &__image {
 
         img,
