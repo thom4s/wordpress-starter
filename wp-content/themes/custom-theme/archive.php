@@ -25,7 +25,7 @@ get_header(); ?>
 			<div class="grid gap-m">
 				<?php while ($post_query->have_posts()) : $post_query->the_post(); ?>
 					<div class="s-4col">
-						<?php get_template_part('Components/Blocks/Block', 'post'); ?>
+						<?php get_template_part('Components/Blocks/Block', 'Post'); ?>
 					</div>
 				<?php endwhile; ?>
 			</div>
