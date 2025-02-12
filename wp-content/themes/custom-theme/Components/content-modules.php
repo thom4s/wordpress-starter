@@ -1,82 +1,18 @@
 <?php
 
 
-$flex_content = 'flex-content';
+$modules = 'modules';
 
 
-if (have_rows( $flex_content )) :
+if (have_rows( $modules )) :
 
 
-    while (have_rows( $flex_content )) : the_row();
-
-        /*
-         * BLOCS de CONTENUS MIS EN AVANT 
-         * (cf. Accueil)
-         */
-        if (get_row_layout() == 'mod_visual_text') :
-            $visuel = get_sub_field('mod_visuel');
-            $txt = get_sub_field('mod_txt');
-
-            $args = array(
-                'visuel'   => $visuel,
-                'txt'   => $txt
-            );
-
-            get_template_part('Components/Modules/Module', 'VisuelText', $args);
-
-
-
-
-        /*
-         * BLOQUOTE
-         */
-        elseif (get_row_layout() == 'mod_quote') :
-            $content = get_sub_field('mod_content');
-
-            $args = array(
-                'content'   => $content
-            );
-
-            get_template_part('Components/Modules/Module', 'Quote', $args);
-
-
-            
-        /*
-         * GRILLE DE VISUELS 
-         */
-        elseif (get_row_layout() == 'mod_visualgrid') :
-            $visuals = get_sub_field('mod_visuals');
-
-            $args = array(
-                'visuals'   => $visuals
-            );
-
-            get_template_part('Components/Modules/Module', 'VisualGrid', $args);
-
-
-
-
-        /*
-         * ACTUALITES BIG
-         */
-        elseif (get_row_layout() == 'mod_news') :
-            $publication = get_sub_field('mod_publication');
-            $title = get_sub_field('mod_title');
-
-            $args = array(
-                'title'   => $title,
-                'publication'   => $publication
-            );
-
-            get_template_part('Components/Modules/Module', 'News', $args);
-
-
-
+    while (have_rows( $modules )) : the_row();
 
         /*
          * CAROUSEL DE PROJETS / PAGE / NEWS
          */
-        elseif (get_row_layout() == 'mod_carousel') :
+        if (get_row_layout() == 'module_carousel') :
 
             $title = get_sub_field('mod_title');
             $bg = get_sub_field('mod_bg');
@@ -114,16 +50,86 @@ if (have_rows( $flex_content )) :
                 $relations = get_posts( $q_args );
             }
             else {
-                $relations = get_sub_field('mod_relations');
+                $posts = get_sub_field('mod_publications');
             }
 
             $args = array(
                 'title'   => $title,
-                'relations'   => $relations,
+                'posts'   => $posts,
                 'bg'   => $bg,
             );
 
             get_template_part('Components/Modules/Module', 'Carousel', $args);
+
+
+        /*
+         * BLOQUOTE
+         */
+        elseif (get_row_layout() == 'module_citation') :
+            $content = get_sub_field('mod_content');
+
+            $args = array(
+                'content'   => $content
+            );
+
+            get_template_part('Components/Modules/Module', 'Quote', $args);
+
+
+
+
+
+        /*
+         * BLOCS de CONTENUS MIS EN AVANT 
+         * (cf. Accueil)
+         */
+        elseif (get_row_layout() == 'mod_visual_text') :
+            $visuel = get_sub_field('mod_visuel');
+            $txt = get_sub_field('mod_txt');
+
+            $args = array(
+                'visuel'   => $visuel,
+                'txt'   => $txt
+            );
+
+            get_template_part('Components/Modules/Module', 'VisuelText', $args);
+
+
+
+
+
+            
+        /*
+         * GRILLE DE VISUELS 
+         */
+        elseif (get_row_layout() == 'mod_visualgrid') :
+            $visuals = get_sub_field('mod_visuals');
+
+            $args = array(
+                'visuals'   => $visuals
+            );
+
+            get_template_part('Components/Modules/Module', 'VisualGrid', $args);
+
+
+
+
+        /*
+         * ACTUALITES BIG
+         */
+        elseif (get_row_layout() == 'mod_news') :
+            $publication = get_sub_field('mod_publication');
+            $title = get_sub_field('mod_title');
+
+            $args = array(
+                'title'   => $title,
+                'publication'   => $publication
+            );
+
+            get_template_part('Components/Modules/Module', 'News', $args);
+
+
+
+
 
 
 

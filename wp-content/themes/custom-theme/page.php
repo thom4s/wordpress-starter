@@ -16,7 +16,7 @@ get_header();
 
 			get_template_part( 'Components/Templates/Template', 'page' );
 
-			get_template_part('Components/content', 'flexible'); 
+			get_template_part('Components/content', 'modules'); 
 
 		endwhile; // End of the loop.
 		?>

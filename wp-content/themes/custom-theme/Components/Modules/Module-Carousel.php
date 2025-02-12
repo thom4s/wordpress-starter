@@ -5,7 +5,7 @@
 
 <section class="mod_carousel swiper carousel  <?php echo $bg ? '-bg' : ''; ?>">
 
-    <header class="mod_title mb-m flex -space -center-y mb-l">
+    <header class="mod_title wrapper mb-m flex -space -center-y mb-l ">
         <h2>
             <?php echo $title; ?>
         </h2>
