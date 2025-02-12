@@ -1,5 +1,4 @@
 <?php
-$title = $args['title'];
 $contacts = $args['contacts'];
 ?>
 
