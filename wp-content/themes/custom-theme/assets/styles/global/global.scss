@@ -57,6 +57,11 @@ ul {
     list-style: none;
 }
 
+a {
+    color: $accent-color;
+    text-decoration: none;
+}
+
 iframe {
     max-width: 100%;
     width: 100%;
@@ -81,5 +86,45 @@ section.home {
             cursor: unset;
             opacity: 0.3;
         }
+    }
+}
+
+
+/*------------------------------------*\
+    ENTRY CONTENT
+\*------------------------------------*/
+
+.entry-content {
+
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+    h2 {
+        margin-top: 60px;
+    }
+    a {
+        text-decoration: underline;
+    }
+    p {
+        margin-bottom: 20px;
+    }
+    ul {
+        list-style: disc;
+    }
+    ul, ol {
+        padding-left: 20px;
+        margin-bottom: 1em;
+
+        li {
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 32px;
+        }
+    }
+
+    img {
+        width: 100%;
+        height: auto;
     }
 }

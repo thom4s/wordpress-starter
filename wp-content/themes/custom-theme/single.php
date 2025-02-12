@@ -20,6 +20,9 @@ get_header();
 				case 'custom':
 					$template = 'custom';
 					break;
+				case 'project':
+					$template = 'project';
+					break;
 
 				default:
 					$template =  get_post_type();

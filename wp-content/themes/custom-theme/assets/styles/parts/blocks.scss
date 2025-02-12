@@ -7,6 +7,7 @@
 
 .block-post,
 .block-project {
+    position: relative;
 
     &__link::after {
         content: '';
