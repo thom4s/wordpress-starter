@@ -4,7 +4,7 @@
 ?>
 
 
-<section class="mod_news -bordered">
+<section class="mod_news">
 
     <header class="mod_header wrapper">
         <h2 class="h2 txt-center mb-xxl"><?php echo $title; ?></h2>

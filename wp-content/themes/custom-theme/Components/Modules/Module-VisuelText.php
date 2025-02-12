@@ -7,7 +7,7 @@ $txt = $args['txt'];
 
 <section class="mod_visuel-text entry-header">
 
-    <div class="grid gap-0">
+    <div class="grid gap-xl">
         <figure class="mod_cover s-6col">
             <img src="<?php echo $visuel; ?>">
         </figure>

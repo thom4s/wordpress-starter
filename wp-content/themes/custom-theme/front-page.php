@@ -32,7 +32,7 @@
         </section>
 
         <section class="home">
-            <h2>Module VisuelTexte</h2>
+            <h2 class="mb-l">Module VisuelTexte</h2>
             <?php
                 $args = array(
                     'post_type' => 'post',
