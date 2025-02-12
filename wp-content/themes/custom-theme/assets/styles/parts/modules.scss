@@ -28,12 +28,7 @@ section[class*="mod"] {
         padding: var(--space-xl) 0;
     }
     &.swiper {
-        // @include wrapper-padding;
-
-        @include min(wide) {
-            padding-left: calc( calc( 100vw - var(--max-width) ) / 2);
-            padding-right: calc( calc( 100vw - var(--max-width) ) / 2);
-        }
+        
     }
 }
 

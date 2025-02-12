@@ -1,7 +1,5 @@
 <?php
-    $title = $args['title'];
     $posts = $args['posts'];
-    $bg = $args['bg'];
 ?>
 
 
