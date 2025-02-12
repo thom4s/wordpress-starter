@@ -1,5 +1,6 @@
 <?php
     $posts = $args['posts'];
+    $title = isset( $args['title'] ) ? $args['title'] : '';
 ?>
 
 

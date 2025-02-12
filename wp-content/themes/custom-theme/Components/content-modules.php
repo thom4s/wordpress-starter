@@ -47,7 +47,7 @@ if (have_rows( $modules )) :
                     $q_args['order'] = 'DESC';
                 }
 
-                $relations = get_posts( $q_args );
+                $posts = get_posts( $q_args );
             }
             else {
                 $posts = get_sub_field('mod_publications');

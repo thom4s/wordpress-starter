@@ -33,7 +33,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": "50",
                                 "class": "",
                                 "id": ""
                             },
@@ -49,6 +49,31 @@
                             "graphql_non_null": 0
                         },
                         {
+                            "key": "field_67acc473f8cd9",
+                            "label": "Affichage automatique des publications ?",
+                            "name": "mod_auto",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "allow_in_bindings": 1,
+                            "ui": 0,
+                            "show_in_graphql": 1,
+                            "graphql_description": "",
+                            "graphql_field_name": "modAuto",
+                            "graphql_non_null": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
                             "key": "field_67acc457f8cd8",
                             "label": "Publication à afficher",
                             "name": "mod_publications",
@@ -56,7 +81,15 @@
                             "type": "relationship",
                             "instructions": "",
                             "required": 0,
-                            "conditional_logic": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_67acc473f8cd9",
+                                        "operator": "!=",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
                             "wrapper": {
                                 "width": "",
                                 "class": "",
@@ -83,29 +116,79 @@
                             "bidirectional_target": []
                         },
                         {
-                            "key": "field_67acc473f8cd9",
-                            "label": "Options",
-                            "name": "mod_options",
+                            "key": "field_67acf627a2b3f",
+                            "label": "Nombre de publications à afficher ?",
+                            "name": "mod_postsperpage",
                             "aria-label": "",
-                            "type": "text",
+                            "type": "number",
                             "instructions": "",
                             "required": 0,
-                            "conditional_logic": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_67acc473f8cd9",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
                             "wrapper": {
-                                "width": "",
+                                "width": "50",
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
-                            "maxlength": "",
+                            "default_value": 6,
+                            "min": "",
+                            "max": "",
                             "allow_in_bindings": 0,
                             "placeholder": "",
+                            "step": "",
                             "prepend": "",
                             "append": "",
                             "show_in_graphql": 1,
                             "graphql_description": "",
-                            "graphql_field_name": "options",
+                            "graphql_field_name": "modPosttype",
                             "graphql_non_null": 0
+                        },
+                        {
+                            "key": "field_67acf63ea2b40",
+                            "label": "Type de Publications à afficher ?",
+                            "name": "mod_posttype",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_67acc473f8cd9",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "page": "Pages",
+                                "post": "Actualités",
+                                "project": "Projets"
+                            },
+                            "default_value": false,
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "allow_in_bindings": 0,
+                            "ui": 0,
+                            "show_in_graphql": 1,
+                            "graphql_description": "",
+                            "graphql_field_name": "modPosttype",
+                            "graphql_non_null": 0,
+                            "ajax": 0,
+                            "placeholder": ""
                         }
                     ],
                     "min": "",
@@ -192,5 +275,5 @@
     "graphql_field_name": "modules",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1739375782
+    "modified": 1739388754
 }
