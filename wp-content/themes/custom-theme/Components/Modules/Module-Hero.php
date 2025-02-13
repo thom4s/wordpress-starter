@@ -5,7 +5,7 @@ $txt = $args['txt'];
 ?>
 
 
-<section class="mod_hearo entry-header">
+<section class="mod_hearo entry-header wrapper">
 
     <div class="is-relative">
         <figure class="mod_cover s-6col">

@@ -4,7 +4,7 @@ $contacts = $args['contacts'];
 ?>
 
 
-<section class="mod_contacts">
+<section class="mod_contacts wrapper">
 
     <div class="mod_title txt-center mb-xxl">
         <h2><?php echo $title; ?></h2>

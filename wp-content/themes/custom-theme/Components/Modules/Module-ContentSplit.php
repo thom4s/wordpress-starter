@@ -6,7 +6,7 @@
     $size = 'thumbnail'; // (thumbnail, medium, large, full or custom size)
 ?>
 
-<section class="mod_contentSplit">
+<section class="mod_contentSplit wrapper">
 
     <div class="wrapper">
         <h2 class="txt-center mb-xl"><?php echo $title; ?></h2>

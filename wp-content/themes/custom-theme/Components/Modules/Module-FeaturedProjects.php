@@ -4,7 +4,7 @@
 ?>
 
 
-<section class="mod_featured-projects -bordered">
+<section class="mod_featured-projects wrapper">
 
     <div class="wrapper">
 

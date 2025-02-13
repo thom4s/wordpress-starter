@@ -4,7 +4,7 @@
     $size = 'thumbnail'; // (thumbnail, medium, large, full or custom size)
 ?>
 
-<section class="mod_visual-grid">
+<section class="mod_visual-grid wrapper">
 
     <?php if( $title ): ?>
         <h2 class="mod_title"><?= $title; ?></h2>

@@ -4,7 +4,7 @@
 ?>
 
 
-<section class="module module_publication">
+<section class="module module_publication wrapper">
 
     <header class="mod_header wrapper">
         <h2 class="h2 txt-center mb-xxl"><?php echo $title; ?></h2>
