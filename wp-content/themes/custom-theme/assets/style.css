@@ -1186,38 +1186,38 @@ p, .body {
 /*------------------------------------*\
     MODULES BORDER & BGs
 \*------------------------------------*/
-[class*=mod] {
+section[class*=mod] {
   margin-top: 100px;
   margin-bottom: 100px;
 }
-[class*=mod].-bordered {
+section[class*=mod].-bordered {
   border: 50px solid #B90013;
   padding: var(--space-xxl) 0;
 }
-[class*=mod].-backgrounded:last-child {
+section[class*=mod].-backgrounded:last-child {
   margin-bottom: 0;
 }
 
 /*------------------------------------*\
     MOD CAROUSEL
 \*------------------------------------*/
-.mod_carousel.-bg {
+section.mod_carousel.-bg {
   background-color: #EFEFEF;
   padding: var(--space-xl) 0;
 }
 /*------------------------------------*\
     MOD QUOTE
 \*------------------------------------*/
-.mod_quote {
+section.mod_quote {
   text-align: center;
 }
 @media (max-width: 920px) {
-  .mod_quote {
+  section.mod_quote {
     margin: var(--space-xxl) 0;
   }
 }
 @media (min-width: 920px) {
-  .mod_quote {
+  section.mod_quote {
     margin: calc(var(--space-xxl) * 2) 0;
   }
 }
@@ -1226,12 +1226,12 @@ p, .body {
     MOD NEWS
 \*------------------------------------*/
 @media (max-width: 920px) {
-  .mod_news .mod_publication .img-container {
+  section.mod_news .mod_publication .img-container {
     order: -1;
     margin-bottom: var(--space-xl);
   }
 }
-.mod_news img {
+section.mod_news img {
   aspect-ratio: 1/1;
   object-fit: cover;
   object-position: center;
@@ -1241,24 +1241,24 @@ p, .body {
 /*------------------------------------*\
     MOD visuel-text
 \*------------------------------------*/
-.mod_visuel-text .mod_content {
+section.mod_visuel-text .mod_content {
   max-width: 800px;
 }
 
 /*------------------------------------*\
     MOD VISUAL GRID (MEDIAS)
 \*------------------------------------*/
-.mod_visual-grid .visual-grid {
+section.mod_visual-grid .visual-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 36px;
 }
-.mod_visual-grid .visual-grid .img-container {
+section.mod_visual-grid .visual-grid .img-container {
   flex-grow: 1;
   height: 500px;
   max-height: 40vh;
 }
-.mod_visual-grid .visual-grid .img-container img {
+section.mod_visual-grid .visual-grid .img-container img {
   object-fit: cover;
   object-position: center;
   width: 100%;
@@ -1268,7 +1268,7 @@ p, .body {
 /*------------------------------------*\
     MOD HERO
 \*------------------------------------*/
-.mod_hero {
+section.mod_hero {
   position: relative;
   overflow: hidden;
   display: flex;
@@ -1277,31 +1277,31 @@ p, .body {
   width: 100%;
   color: #ffffff;
 }
-.mod_hero .hero {
+section.mod_hero .hero {
   width: 100%;
 }
-.mod_hero .hero__image {
+section.mod_hero .hero__image {
   position: absolute;
   inset: 0;
   z-index: -1;
 }
-.mod_hero .hero__image img {
+section.mod_hero .hero__image img {
   width: 100%;
   height: 100%;
 }
-.mod_hero .hero__image::before {
+section.mod_hero .hero__image::before {
   content: "";
   position: absolute;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.25);
 }
-.mod_hero .hero__content {
+section.mod_hero .hero__content {
   padding: 150px;
   display: flex;
   flex-direction: column;
   gap: var(--space-s);
 }
-.mod_hero .hero__content h1 {
+section.mod_hero .hero__content h1 {
   font-size: 60px;
 }
 

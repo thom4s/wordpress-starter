@@ -7,7 +7,7 @@
     MODULES BORDER & BGs
 \*------------------------------------*/
 
-[class*="mod"] {
+section[class*="mod"] {
     margin-top: 100px;
     margin-bottom: 100px;
 
@@ -25,7 +25,7 @@
     MOD CAROUSEL
 \*------------------------------------*/
 
-.mod_carousel {
+section.mod_carousel {
     &.-bg {
         background-color: $gray-light;
         padding: var(--space-xl) 0;
@@ -39,7 +39,7 @@
     MOD QUOTE
 \*------------------------------------*/
 
-.mod_quote {
+section.mod_quote {
     text-align: center;
 
     @include max(medium) {
@@ -54,7 +54,7 @@
     MOD NEWS
 \*------------------------------------*/
 
-.mod_news {
+section.mod_news {
     .mod_publication {
         .img-container {
             @include max(medium) {
@@ -76,7 +76,7 @@
     MOD visuel-text
 \*------------------------------------*/
 
-.mod_visuel-text {
+section.mod_visuel-text {
     .mod_content {
         max-width: 800px;
     }
@@ -86,7 +86,7 @@
     MOD VISUAL GRID (MEDIAS)
 \*------------------------------------*/
 
-.mod_visual-grid {
+section.mod_visual-grid {
     .visual-grid {
         display: flex;
         flex-wrap: wrap;
@@ -111,7 +111,7 @@
     MOD HERO
 \*------------------------------------*/
 
-.mod_hero {
+section.mod_hero {
     position: relative;
     overflow: hidden;
     display: flex;

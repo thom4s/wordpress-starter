@@ -1,12 +1,4 @@
-<?php
-/**
- * The template for displaying all pages
- *
- * @package custom-theme
- */
-
-get_header();
-?>
+<?php get_header(); ?>
 
 	<main id="primary" class="site-main">
 
@@ -18,10 +10,10 @@ get_header();
 
 			get_template_part('Components/content', 'modules'); 
 
-		endwhile; // End of the loop.
+		endwhile;
 		?>
 
-	</main><!-- #main -->
+	</main>
 
 <?php
 get_footer();
