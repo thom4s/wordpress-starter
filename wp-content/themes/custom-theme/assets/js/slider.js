@@ -6,14 +6,10 @@ document.addEventListener('DOMContentLoaded', function() {
         let swiperCarousel = new Swiper(slider, {
             slidesPerView: 2.5,
             spaceBetween: 30,
-            // pagination: {
-            //     el: slider.querySelector('.swiper-pagination'),
-            //     type: 'custom',
-            //     renderCustom: function (swiper, current, total) {
-            //         const formatNumber = (number) => number.toLocaleString('fr-FR', { minimumIntegerDigits: 2, useGrouping: false });
-            //         return formatNumber(current) + ' - ' + formatNumber(total); 
-            //     }
-            // },
+            pagination: {
+                el: slider.querySelector('.swiper-pagination'),
+                clickable: true,                
+            },
             navigation: {
                 nextEl: slider.querySelector('.swiper-button.next'),
                 prevEl: slider.querySelector('.swiper-button.prev'),

@@ -21,22 +21,22 @@
         </div>
     </header>
 
-    <!-- <div class="mod_relations "> -->
-        <?php if ($posts) : ?>
+    <?php if ($posts) : ?>
 
-            <div class="swiper-wrapper">
+        <div class="swiper-wrapper">
 
-                <?php foreach ($posts as $post) : setup_postdata($post); ?>
-                    <div class="swiper-slide">
-                        <?php get_template_part('Components/Blocks/Block', 'Post'); ?>
-                    </div>
-                <?php endforeach; ?>
+            <?php foreach ($posts as $post) : setup_postdata($post); ?>
+                <div class="swiper-slide">
+                    <?php get_template_part('Components/Blocks/Block', 'Post'); ?>
+                </div>
+            <?php endforeach; ?>
 
-            </div>
+        </div>
 
-            <?php wp_reset_postdata(); ?>
-        <?php endif; ?>
-    <!-- </div> -->
+        <div class="swiper-pagination"></div>
+
+        <?php wp_reset_postdata(); ?>
+    <?php endif; ?>
 
 
 </section>

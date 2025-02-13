@@ -81,6 +81,7 @@ iframe {
 
 .swiper {
     overflow: visible !important;
+    --swiper-theme-color: #000000;
 
     .swiper-button {
         cursor: pointer;
@@ -89,6 +90,11 @@ iframe {
             cursor: unset;
             opacity: 0.3;
         }
+    }
+
+    .swiper-pagination {
+        position: static;
+        margin-top: var(--space-l);
     }
 }
 
