@@ -296,6 +296,47 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_67adbe944f237": {
+                    "key": "layout_67adbe944f237",
+                    "name": "module_formulaire_contact",
+                    "label": "Module Formulaire Contact",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_67adbea24f23e",
+                            "label": "Formulaire à afficher",
+                            "name": "mod_form_id",
+                            "aria-label": "",
+                            "type": "post_object",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "wpcf7_contact_form"
+                            ],
+                            "post_status": "",
+                            "taxonomy": "",
+                            "return_format": "id",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "allow_in_bindings": 0,
+                            "bidirectional": 0,
+                            "show_in_graphql": 1,
+                            "graphql_description": "",
+                            "graphql_field_name": "formulaireAAfficher",
+                            "graphql_connection_type": "one_to_many",
+                            "ui": 1,
+                            "bidirectional_target": []
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -343,5 +384,5 @@
     "graphql_field_name": "modules",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1739439675
+    "modified": 1739439867
 }

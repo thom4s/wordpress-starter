@@ -89,6 +89,20 @@ if (have_rows( $modules )) :
 
 
 
+        /*
+         * PUBLICATION SEULE
+         */
+        elseif (get_row_layout() == 'module_formulaire_contact') :
+
+            $args = array(
+                'id'   => get_sub_field('mod_form_id'),
+            );
+
+            get_template_part('Components/Modules/Module', 'Formulaire', $args);
+
+
+
+
 
 
         /*
