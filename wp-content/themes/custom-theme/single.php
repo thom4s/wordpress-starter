@@ -17,11 +17,9 @@ get_header();
 			$args = array();
 
 			switch ( get_post_type() ) {
+
 				case 'custom':
 					$template = 'custom';
-					break;
-				case 'project':
-					$template = 'project';
 					break;
 
 				default:
@@ -31,7 +29,7 @@ get_header();
 
 			get_template_part( 'Components/Templates/Template', $template, $args );
 
-			get_template_part('Components/content', 'flexible'); 
+			get_template_part('Components/content', 'module'); 
 
 		endwhile; // End of the loop.
 		?>

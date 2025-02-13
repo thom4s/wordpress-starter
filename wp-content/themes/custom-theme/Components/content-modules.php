@@ -66,13 +66,26 @@ if (have_rows( $modules )) :
          * BLOQUOTE
          */
         elseif (get_row_layout() == 'module_citation') :
-            $content = get_sub_field('mod_content');
 
             $args = array(
-                'content'   => $content
+                'content'   =>  get_sub_field('mod_content')
             );
 
             get_template_part('Components/Modules/Module', 'Quote', $args);
+
+
+
+        /*
+         * PUBLICATION SEULE
+         */
+        elseif (get_row_layout() == 'module_publication') :
+
+            $args = array(
+                'title'   => get_sub_field('mod_title'),
+                'publication'   => get_sub_field('mod_publication')
+            );
+
+            get_template_part('Components/Modules/Module', 'Publication', $args);
 
 
 
@@ -94,9 +107,6 @@ if (have_rows( $modules )) :
             get_template_part('Components/Modules/Module', 'VisuelText', $args);
 
 
-
-
-
             
         /*
          * GRILLE DE VISUELS 
@@ -109,23 +119,6 @@ if (have_rows( $modules )) :
             );
 
             get_template_part('Components/Modules/Module', 'VisualGrid', $args);
-
-
-
-
-        /*
-         * ACTUALITES BIG
-         */
-        elseif (get_row_layout() == 'mod_news') :
-            $publication = get_sub_field('mod_publication');
-            $title = get_sub_field('mod_title');
-
-            $args = array(
-                'title'   => $title,
-                'publication'   => $publication
-            );
-
-            get_template_part('Components/Modules/Module', 'News', $args);
 
 
 

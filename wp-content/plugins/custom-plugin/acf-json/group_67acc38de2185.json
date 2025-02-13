@@ -228,6 +228,74 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_67adb97ffa4d5": {
+                    "key": "layout_67adb97ffa4d5",
+                    "name": "module_publication",
+                    "label": "Module PUBLICATION SEULE",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_67adb9cefa4d7",
+                            "label": "Titre du module (optionnel)",
+                            "name": "mod_title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "show_in_graphql": 1,
+                            "graphql_description": "",
+                            "graphql_field_name": "titreDuModuleOptionnel",
+                            "graphql_non_null": 0
+                        },
+                        {
+                            "key": "field_67adb9f6fa4d8",
+                            "label": "Publication à afficher",
+                            "name": "mod_publication",
+                            "aria-label": "",
+                            "type": "post_object",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "post",
+                                "project",
+                                "page"
+                            ],
+                            "post_status": "",
+                            "taxonomy": "",
+                            "return_format": "object",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "allow_in_bindings": 0,
+                            "bidirectional": 0,
+                            "show_in_graphql": 1,
+                            "graphql_description": "",
+                            "graphql_field_name": "modPublication",
+                            "graphql_connection_type": "one_to_many",
+                            "ui": 1,
+                            "bidirectional_target": []
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -275,5 +343,5 @@
     "graphql_field_name": "modules",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1739388754
+    "modified": 1739439675
 }

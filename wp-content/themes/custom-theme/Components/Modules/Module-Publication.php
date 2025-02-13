@@ -1,9 +1,10 @@
 <?php
-    $publication = $args['post'];
+    $title = $args['title'];
+    $publication = $args['publication'];
 ?>
 
 
-<section class="mod_news">
+<section class="module module_publication">
 
     <header class="mod_header wrapper">
         <h2 class="h2 txt-center mb-xxl"><?php echo $title; ?></h2>
