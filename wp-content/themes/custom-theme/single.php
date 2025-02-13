@@ -29,7 +29,7 @@ get_header();
 
 			get_template_part( 'Components/Templates/Template', $template, $args );
 
-			get_template_part('Components/content', 'module'); 
+			// get_template_part('Components/content', 'module'); 
 
 		endwhile; // End of the loop.
 		?>
