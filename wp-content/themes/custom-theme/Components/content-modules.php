@@ -99,47 +99,46 @@ if (have_rows( $modules )) :
             );
 
             get_template_part('Components/Modules/Module', 'Formulaire', $args);
-
-
-
-
-
-
         /*
          * BLOCS de CONTENUS MIS EN AVANT 
          * (cf. Accueil)
          */
-        elseif (get_row_layout() == 'mod_visual_text') :
-            $visuel = get_sub_field('mod_visuel');
-            $txt = get_sub_field('mod_txt');
+        elseif (get_row_layout() == 'module_visuel_texte') :
 
             $args = array(
-                'visuel'   => $visuel,
-                'txt'   => $txt
+                'visuel'   => get_sub_field('mod_visuel'),
+                'txt'   => get_sub_field('mod_txt')
             );
 
             get_template_part('Components/Modules/Module', 'VisuelText', $args);
 
+        /*
+         * EQUIPE / CONTACTS
+         * (cf. Le Fonds / Espace Presse)
+         */
+        elseif (get_row_layout() == 'module_contacts') :
 
-            
+            $title = get_sub_field('mod_title');
+            $contacts = get_sub_field('mod_contacts');
+
+            $args = array(
+                'title'   => $title,
+                'contacts'   => $contacts
+            );
+
+            get_template_part('Components/Modules/Module', 'Contacts', $args);    
+        
         /*
          * GRILLE DE VISUELS 
          */
-        elseif (get_row_layout() == 'mod_visualgrid') :
-            $visuals = get_sub_field('mod_visuals');
+        elseif (get_row_layout() == 'module_visualgrid') :
 
             $args = array(
-                'visuals'   => $visuals
+                'title'     => get_sub_field('mod_title'),
+                'visuals'   => get_sub_field('mod_visuals')
             );
 
             get_template_part('Components/Modules/Module', 'VisualGrid', $args);
-
-
-
-
-
-
-
 
 
         /*
@@ -178,61 +177,6 @@ if (have_rows( $modules )) :
             );
 
             get_template_part('Components/Modules/Module', 'ContentSplit', $args);
-
-
-        /*
-         * DOSSIERS DE PRESSE
-         * (cf. Espace presse)
-         */
-        elseif (get_row_layout() == 'mod_presskits') :
-
-            $presskits = get_sub_field('presskits');
-
-            $args = array(
-                'presskits'   => $presskits
-            );
-
-            get_template_part('Components/Modules/Module', 'Presskits', $args);
-
-
-
-
-        /*
-         * EQUIPE / CONTACTS
-         * (cf. Le Fonds / Espace Presse)
-         */
-        elseif (get_row_layout() == 'mod_contacts') :
-
-            $title = get_sub_field('mod_title');
-            $contacts = get_sub_field('mod_contacts');
-
-            $args = array(
-                'title'   => $title,
-                'contacts'   => $contacts
-            );
-
-            get_template_part('Components/Modules/Module', 'Contacts', $args);
-
-
-        /*
-         * INSTAGRAM FEED
-         */
-        elseif (get_row_layout() == 'mod_instafeed') :
-
-            $id = get_sub_field('mod_feedId');
-            $account = get_sub_field('mod_account');
-            $hashtag = get_sub_field('mod_hashtag');
-            $bg = get_sub_field('mod_bg');
-
-            $args = array(
-                'id'   => $id,
-                'account'   => $account,
-                'hashtag'   => $hashtag,
-                'bg'   => $bg,
-            );
-
-            get_template_part('Components/Modules/Module', 'Instafeed', $args);
-
 
 
         endif;

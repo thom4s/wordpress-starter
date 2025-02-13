@@ -23,7 +23,7 @@
                             </header>
 
                             <div class="body mb-l">
-                                <?= the_excerpt($publication->ID); ?>
+                                <?= get_the_excerpt($publication->ID); ?>
                             </div>
 
                             <a href="<?php the_permalink(); ?>" class="btn -primary">Lire la suite</a>
@@ -31,7 +31,7 @@
                         </div>
                         <div class="s-1col"></div>
                         <div class="s-6col">
-                            <?php the_post_thumbnail( $publication->ID, 'full' ); ?>
+                            <?php echo get_the_post_thumbnail( $publication->ID, 'full' ); ?>
                         </div>
                     </div>
                 </div>

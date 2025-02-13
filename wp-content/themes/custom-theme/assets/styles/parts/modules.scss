@@ -38,6 +38,10 @@ section[class*="mod"] {
 
 .mod_quote {
     text-align: center;
+    p {
+        font-size: 18px;
+    }
+
     @include max(medium) {
         margin: var(--space-xxl) 0;
     }
