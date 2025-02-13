@@ -113,6 +113,20 @@ if (have_rows( $modules )) :
             get_template_part('Components/Modules/Module', 'VisuelText', $args);
 
         /*
+         * Hero 
+         * (cf. Accueil)
+         */
+        elseif (get_row_layout() == 'module_hero') :
+            
+            $args = array(
+                'title'   => get_sub_field('mod_title'),
+                'txt'   => get_sub_field('mod_txt'),
+                'bg'   => get_sub_field('mod_bg_image'),
+            );
+
+            get_template_part('Components/Modules/Module', 'Hero', $args);
+        
+        /*
          * EQUIPE / CONTACTS
          * (cf. Le Fonds / Espace Presse)
          */
