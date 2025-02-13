@@ -6,7 +6,7 @@ $txt = $args['txt'];
 ?>
 
 
-<section class="mod_hero entry-header wrapper">
+<section class="mod_hero entry-header ">
 
     <div class="hero is-relative">
         <figure class="hero__image s-6col">
