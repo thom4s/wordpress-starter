@@ -16,6 +16,10 @@ body.admin-bar .site-header {
     z-index: 50;
     transition: transform .3s;
 
+    &.-out {
+        transform: translateY(-100%);
+    }
+
     .header-top {
         background-color: rgb(210, 210, 210);
         padding: 10px 0;
