@@ -717,6 +717,55 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_67af113609753": {
+                    "key": "layout_67af113609753",
+                    "name": "module_video",
+                    "label": "Module VIDEO",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_67af14aa1a3a7",
+                            "label": "Titre",
+                            "name": "mod_title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_67af114009755",
+                            "label": "mod_video",
+                            "name": "mod_video",
+                            "aria-label": "",
+                            "type": "url",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "allow_in_bindings": 1,
+                            "placeholder": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -756,5 +805,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1739457366
+    "modified": 1739527358
 }
