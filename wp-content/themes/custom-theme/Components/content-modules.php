@@ -90,15 +90,16 @@ if (have_rows( $modules )) :
 
 
         /*
-         * PUBLICATION SEULE
+         * FORMULAIRE DE CONTACT
          */
         elseif (get_row_layout() == 'module_formulaire_contact') :
 
             $args = array(
-                'id'   => get_sub_field('mod_form_id'),
+                'title'     => get_sub_field('mod_title'),
+                'form_id'   => get_sub_field('mod_form_id'),
             );
 
-            get_template_part('Components/Modules/Module', 'Formulaire', $args);
+            get_template_part('Components/Modules/Module', 'ContactForm', $args);
         /*
          * BLOCS de CONTENUS MIS EN AVANT 
          * (cf. Accueil)

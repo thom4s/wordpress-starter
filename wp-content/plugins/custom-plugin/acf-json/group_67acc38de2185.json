@@ -300,9 +300,30 @@
                 "layout_67adbe944f237": {
                     "key": "layout_67adbe944f237",
                     "name": "module_formulaire_contact",
-                    "label": "Module Formulaire Contact",
+                    "label": "Module FORMULAIRE DE CONTACT",
                     "display": "block",
                     "sub_fields": [
+                        {
+                            "key": "field_67af1e3058b0f",
+                            "label": "Titre",
+                            "name": "mod_title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
                         {
                             "key": "field_67adbea24f23e",
                             "label": "Formulaire à afficher",
@@ -805,5 +826,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1739527358
+    "modified": 1739530110
 }
