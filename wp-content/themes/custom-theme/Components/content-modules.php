@@ -167,6 +167,18 @@ if (have_rows( $modules )) :
 
             get_template_part('Components/Modules/Module', 'Video', $args);
         /*
+         * ACCORDEON
+         */
+        elseif (get_row_layout() == 'module_accordeon') :
+
+            $args = array(
+                'title'      => get_sub_field('mod_title'),
+                'accordeons' => get_sub_field('mod_accordeons')
+                
+            );
+
+            get_template_part('Components/Modules/Module', 'Accordeons', $args);
+        /*
          * PROJETS MIS EN AVANT () 
          */
         elseif (get_row_layout() == 'mod_featuredProjects') :

@@ -82,6 +82,8 @@
     visibility: visible;
 }
 
+.overflow-hidden { overflow: hidden }
+
 .on-mobile {
     @include min(medium) {
         display: none !important;

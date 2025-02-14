@@ -768,7 +768,7 @@
                         },
                         {
                             "key": "field_67af114009755",
-                            "label": "mod_video",
+                            "label": "Video",
                             "name": "mod_video",
                             "aria-label": "",
                             "type": "url",
@@ -783,6 +783,104 @@
                             "default_value": "",
                             "allow_in_bindings": 1,
                             "placeholder": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_67af23e6dac3a": {
+                    "key": "layout_67af23e6dac3a",
+                    "name": "module_accordeon",
+                    "label": "Module ACCORDEON",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_67af24e7fecc6",
+                            "label": "Titre",
+                            "name": "mod_title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_67af23fcdac3c",
+                            "label": "Accordeons",
+                            "name": "mod_accordeons",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "table",
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": "",
+                            "button_label": "Ajouter un élément",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_67af242ddac3d",
+                                    "label": "Titre",
+                                    "name": "mod_title",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_67af23fcdac3c"
+                                },
+                                {
+                                    "key": "field_67af243bdac3e",
+                                    "label": "Contenu",
+                                    "name": "mod_content",
+                                    "aria-label": "",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "rows": "",
+                                    "placeholder": "",
+                                    "new_lines": "",
+                                    "parent_repeater": "field_67af23fcdac3c"
+                                }
+                            ]
                         }
                     ],
                     "min": "",
@@ -826,5 +924,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1739530110
+    "modified": 1739531824
 }
